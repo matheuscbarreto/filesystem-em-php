@@ -1,5 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Storage;
 
-Route::view('/', home)->name('home');
+Route::get('/', function () {
+
+    $content = Storage::disk('public')->get('teste.txt');
+    echo $content;
+});
