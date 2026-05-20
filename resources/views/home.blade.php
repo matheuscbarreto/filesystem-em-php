@@ -15,6 +15,12 @@
 
                     <a href="{{ route('storage.local.append') }}" class="btn btn-primary">Acrescentar conteúdo no storage
                         local</a>
+
+                    <a href="{{ route('storage.local.read') }}" class="btn btn-primary">Ler o conteúdo do storage
+                        local</a>
+
+                    <a href="{{ route('storage.local.read.multi') }}" class="btn btn-primary">Ler arquivos com múltiplas
+                        linhas</a>
                 </div>
             </div>
         </div>
