@@ -5,3 +5,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [FileController::class, 'index']);
 Route::get('/storage_local_create', [FileController::class, 'storageLocalCreate'])->name('storage.local.create');
+Route::get('/storage_local_append', [FileController::class, 'storageLocalAppend'])->name('storage.local.append');
