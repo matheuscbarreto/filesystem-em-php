@@ -30,8 +30,11 @@
                     <a href="{{ route('storage.local.store.json') }}" class="btn btn-primary">Armazenar dados em
                         JSON</a>
 
-
                     <a href="{{ route('storage.local.read_json') }}" class="btn btn-primary">Ler dados em JSON</a>
+
+                    <a href="{{ route('storage.local.list_files') }}" class="btn btn-primary">Listar arquivos</a>
+
+                    <a href="{{ route('storage.local.delete_file') }}" class="btn btn-primary">Excluir arquivo</a>
                 </div>
             </div>
         </div>
