@@ -105,4 +105,14 @@ class FileController extends Controller
         // delete all files
         // Storage::disk('public')->delete(Storage::disk('public')->files());
     }
+
+    public function createFolder()
+    {
+        Storage::disk('public')->makeDirectory('Documents');
+    }
+
+    public function deleteFolder()
+    {
+        Storage::disk('public')->deleteDirectory('Documents');
+    }
 }
