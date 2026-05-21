@@ -22,6 +22,11 @@
                     <a href="{{ route('storage.local.read.multi') }}" class="btn btn-primary">Ler arquivos com múltiplas
                         linhas</a>
                 </div>
+
+                <div class="d-flex gap-5 mt-5">
+                    <a href="{{ route('storage.local.check.file') }}" class="btn btn-primary">Verificar a existência de
+                        arquivo</a>
+                </div>
             </div>
         </div>
     </div>

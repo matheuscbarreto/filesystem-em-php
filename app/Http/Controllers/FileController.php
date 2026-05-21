@@ -44,4 +44,18 @@ class FileController extends Controller
             echo '<p>' . $line . '</p>';
         }
     }
+
+    public function stoarageLocalCheckFile()
+    {
+        $exists = Storage::disk('public')->exists('file1.txt');
+
+        if ($exists) echo "O arquivo existe";
+        else echo "O arquivo não existe";
+
+        // posso verificar também se um arquivo não existe através do método "missing"
+        // $missing = Storage::disk('public')->missing('file2.txt');
+
+        // if ($missing) echo "O arquivo não existe";
+        // else echo "O arquivo existe";
+    }
 }
