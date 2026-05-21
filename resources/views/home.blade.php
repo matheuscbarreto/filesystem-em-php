@@ -26,6 +26,12 @@
                 <div class="d-flex gap-5 mt-5">
                     <a href="{{ route('storage.local.check.file') }}" class="btn btn-primary">Verificar a existência de
                         arquivo</a>
+
+                    <a href="{{ route('storage.local.store.json') }}" class="btn btn-primary">Armazenar dados em
+                        JSON</a>
+
+
+                    <a href="{{ route('storage.local.read_json') }}" class="btn btn-primary">Ler dados em JSON</a>
                 </div>
             </div>
         </div>

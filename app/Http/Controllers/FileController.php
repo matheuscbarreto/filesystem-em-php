@@ -58,4 +58,33 @@ class FileController extends Controller
         // if ($missing) echo "O arquivo não existe";
         // else echo "O arquivo existe";
     }
+
+    public function storeJson()
+    {
+        $data = [
+            [
+                'name' => 'João',
+                'email' => 'joao@gmail.com'
+            ],
+            [
+                'name' => 'Ana',
+                'email' => 'ana@gmail.com'
+            ],
+            [
+                'name' => 'Carlos',
+                'email' => 'carlos@gmail.com'
+            ]
+        ];
+
+        Storage::disk('public')->put('data.json', json_encode($data));
+
+        echo 'Dados armazenados em JSON com sucesso!';
+    }
+
+    public function readJson()
+    {
+        $data = Storage::disk('public')->json('data.json');
+        echo '<pre>';
+        print_r($data);
+    }
 }
