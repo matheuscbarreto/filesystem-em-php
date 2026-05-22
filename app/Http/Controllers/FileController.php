@@ -157,4 +157,14 @@ class FileController extends Controller
 
         return response()->download('storage/' . $file);
     }
+
+    public function uploadFile(Request $request)
+    {
+        // solução para guardar o ficheiro na pasta "storage/app/uploads"
+
+        $request->file('arquivo')->store('uploads');
+
+        // para salvar o arquivo com nome original
+        // $request->file('arquivo')->storeAs('uploads', $request->file('arquivo')->getClientOriginalName());
+    }
 }

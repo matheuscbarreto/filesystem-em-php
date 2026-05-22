@@ -24,3 +24,6 @@ Route::get('/storage_local_list_for_download', [FileController::class, 'listFile
 
 // download
 Route::get('/download/{file}', [FileController::class, 'downloadFile'])->name('download.file');
+
+//upload
+Route::post('/storage_local_upload', [FileController::class, 'uploadFile'])->name('storage.local.upload');
