@@ -134,4 +134,27 @@ class FileController extends Controller
 
         return view('list-files-with-metadata', ['files' => $files]);
     }
+
+    public function listFilesForDownload()
+    {
+        $list_files = Storage::disk('public')->allFiles();
+
+        $files = [];
+
+        foreach ($list_files as $file) {
+            $files[] = [
+                'name' => $file,
+                'size' => round(Storage::disk('public')->size($file) / 1024, 2) . ' KB',
+                'file' => basename($file)
+            ];
+        }
+
+        return view('list-files-for-download', ['files' => $files]);
+    }
+
+    public function downloadFile($file)
+    {
+
+        return response()->download('storage/' . $file);
+    }
 }

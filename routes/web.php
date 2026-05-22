@@ -20,3 +20,7 @@ Route::get('/storage_local_delete_folder', [FileController::class, 'deleteFolder
 
 
 Route::get('/storage_local_list_files_metadata', [FileController::class, 'listFilesWithMetadata'])->name('storage.local.list.files.metadata');
+Route::get('/storage_local_list_for_download', [FileController::class, 'listFilesForDownload'])->name('storage.local.list.files.for.download');
+
+// download
+Route::get('/download/{file}', [FileController::class, 'downloadFile'])->name('download.file');

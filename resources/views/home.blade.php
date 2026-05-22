@@ -45,6 +45,9 @@
 
                     <a href="{{ route('storage.local.list.files.metadata') }}" class="btn btn-primary">Listar metadata
                         de arquivos</a>
+
+                    <a href="{{ route('storage.local.list.files.for.download') }}" class="btn btn-primary">Listar
+                        arquivos para download</a>
                 </div>
             </div>
         </div>
