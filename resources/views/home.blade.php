@@ -35,13 +35,16 @@
                     <a href="{{ route('storage.local.list_files') }}" class="btn btn-primary">Listar arquivos</a>
 
                     <a href="{{ route('storage.local.delete_file') }}" class="btn btn-primary">Excluir arquivo</a>
-                    
+
                 </div>
 
                 <div class="d-flex gap-5 mt-5">
                     <a href="{{ route('storage.local.create.folder') }}" class="btn btn-primary">Criar pasta</a>
 
                     <a href="{{ route('storage.local.delete.folder') }}" class="btn btn-primary">Excluir pasta</a>
+
+                    <a href="{{ route('storage.local.list.files.metadata') }}" class="btn btn-primary">Listar metadata
+                        de arquivos</a>
                 </div>
             </div>
         </div>
