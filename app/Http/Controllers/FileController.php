@@ -162,9 +162,20 @@ class FileController extends Controller
     {
         // solução para guardar o ficheiro na pasta "storage/app/uploads"
 
-        $request->file('arquivo')->store('uploads');
+        // $request->file('arquivo')->store('uploads');
 
         // para salvar o arquivo com nome original
         // $request->file('arquivo')->storeAs('uploads', $request->file('arquivo')->getClientOriginalName());
+
+
+        // ------------------------------------------------
+
+        $request->validate([
+            'arquivo' => 'required|mimes:pdf,jpg,png,jpeg|max:2048'
+        ]);
+
+        $request->file('arquivo')->store('public');
+
+        echo "Arquivo enviado com sucesso!";
     }
 }
